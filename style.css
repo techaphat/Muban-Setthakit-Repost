@@ -7,16 +7,16 @@
 
 @font-face {
   font-family: "ChulaCharasNew";
-  src: url("ChulaCharasNewIta.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
+  src: url("ChulaCharasNewBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "ChulaCharasNew";
-  src: url("ChulaCharasNewBold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
+  src: url("ChulaCharasNewIta.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
 }
 
 @font-face {
@@ -39,15 +39,15 @@ body {
   min-height: 100vh;
   font-family: "ChulaCharasNew", serif;
   background:
-    radial-gradient(circle at top, rgba(144, 169, 184, 0.22), transparent 32%),
-    linear-gradient(180deg, #ffffff 0%, #f7f3ea 100%);
-  color: #1f2933;
+    radial-gradient(circle at top, rgba(167, 188, 198, 0.22), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f6f2ea 100%);
+  color: #1e2d38;
   overflow-x: hidden;
 }
 
 .app-shell {
   min-height: 100vh;
-  padding: 34px 28px 26px;
+  padding: 34px 28px 28px;
   display: flex;
   flex-direction: column;
 }
@@ -56,56 +56,25 @@ body {
 
 .brand-header {
   text-align: center;
-  margin-bottom: 22px;
+  margin-bottom: 26px;
 }
 
 .small-title {
   font-size: 25px;
   font-weight: 700;
-  color: #496776;
+  color: #516671;
 }
 
 .brand-header h1 {
   margin: 0;
-  font-size: clamp(84px, 12vw, 156px);
+  font-size: clamp(88px, 13vw, 160px);
   line-height: 0.86;
   font-weight: 700;
   letter-spacing: -2px;
   color: #1e2d38;
 }
 
-.brand-header p {
-  margin: 18px 0 0;
-  font-size: 26px;
-  font-weight: 700;
-  color: #50616d;
-}
-
-/* Intro */
-
-.intro-text {
-  width: min(980px, 92vw);
-  margin: 0 auto 18px;
-  text-align: center;
-}
-
-.intro-text h2 {
-  margin: 0;
-  font-size: clamp(44px, 5vw, 68px);
-  line-height: 1.05;
-  font-weight: 700;
-  color: #1e2d38;
-}
-
-.intro-text p {
-  margin: 12px auto 0;
-  max-width: 850px;
-  font-size: 24px;
-  line-height: 1.55;
-  color: #60717d;
-}
-
-/* Story stage */
+/* Story area */
 
 .story-stage {
   position: relative;
@@ -142,14 +111,14 @@ body {
 .story-slide {
   position: relative;
   flex: 0 0 min(86vw, 980px);
-  height: min(64vh, 660px);
-  min-height: 500px;
+  height: min(66vh, 690px);
+  min-height: 520px;
   border-radius: 34px;
   overflow: hidden;
   scroll-snap-align: center;
   background: #ffffff;
   box-shadow:
-    0 28px 80px rgba(31, 41, 51, 0.18),
+    0 30px 86px rgba(31, 41, 51, 0.18),
     inset 0 0 0 1px rgba(31, 41, 51, 0.08);
   transform: scale(0.96);
   transition:
@@ -161,7 +130,7 @@ body {
 .story-slide.is-touching {
   transform: scale(1);
   box-shadow:
-    0 38px 100px rgba(31, 41, 51, 0.28),
+    0 40px 110px rgba(31, 41, 51, 0.28),
     inset 0 0 0 1px rgba(31, 41, 51, 0.1);
 }
 
@@ -188,50 +157,70 @@ body {
   transform: scale(1.06);
 }
 
-/* Overlay text box */
+/* Dark gradient on image for readable text */
+
+.image-shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.72) 0%,
+      rgba(0, 0, 0, 0.42) 32%,
+      rgba(0, 0, 0, 0.12) 62%,
+      rgba(0, 0, 0, 0.08) 100%
+    );
+}
+
+/* Overlay text directly on image */
 
 .slide-content {
   position: absolute;
-  left: 34px;
-  right: 34px;
-  bottom: 30px;
+  left: 42px;
+  right: 42px;
+  bottom: 36px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: end;
-  gap: 18px;
-  padding: 22px;
-  border-radius: 28px;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(14px);
-  box-shadow: 0 18px 40px rgba(31, 41, 51, 0.22);
+  gap: 20px;
+  color: #ffffff;
 }
 
 .story-label {
-  width: 58px;
-  height: 58px;
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
   display: grid;
   place-items: center;
   background: #1e2d38;
   color: #f8df6a;
-  font-size: 24px;
+  font-size: 25px;
   font-weight: 700;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.32);
 }
 
 .story-text h2 {
   margin: 0;
-  font-size: clamp(46px, 5.4vw, 78px);
-  line-height: 0.98;
-  color: #1e2d38;
+  font-size: clamp(54px, 6vw, 92px);
+  line-height: 0.96;
   font-weight: 700;
+  color: #ffffff;
+  text-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.78),
+    0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .story-text p {
-  margin: 10px 0 0;
-  font-size: clamp(24px, 2.5vw, 34px);
-  line-height: 1.25;
-  color: #4c5f6b;
+  margin: 12px 0 0;
+  max-width: 760px;
+  font-size: clamp(26px, 3vw, 42px);
+  line-height: 1.22;
   font-weight: 700;
+  color: #ffffff;
+  text-shadow:
+    0 4px 22px rgba(0, 0, 0, 0.82),
+    0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .read-pill {
@@ -239,11 +228,12 @@ body {
   color: #ffffff;
   font-size: 22px;
   font-weight: 700;
-  letter-spacing: 1.2px;
-  padding: 16px 30px;
+  letter-spacing: 1.4px;
+  padding: 16px 32px;
   border-radius: 999px;
-  background: #1e2d38;
-  box-shadow: 0 12px 28px rgba(31, 41, 51, 0.24);
+  background: rgba(30, 45, 56, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.34);
   transition:
     transform 0.3s ease,
     background 0.3s ease;
@@ -251,7 +241,7 @@ body {
 
 .read-pill:hover {
   transform: translateY(-3px);
-  background: #3f5f73;
+  background: rgba(63, 95, 115, 0.98);
 }
 
 /* Navigation buttons */
@@ -265,7 +255,7 @@ body {
   height: 78px;
   border-radius: 999px;
   border: 1px solid rgba(31, 41, 51, 0.16);
-  background: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.88);
   color: #1e2d38;
   font-size: 48px;
   line-height: 1;
@@ -312,85 +302,10 @@ body {
   background: #ffffff;
 }
 
-/* Detail pages */
-
-.detail-page {
-  min-height: 100vh;
-  padding: 34px 28px 28px;
-}
-
-.detail-header {
-  text-align: center;
-  margin-bottom: 26px;
-}
-
-.detail-header .small-title {
-  font-size: 22px;
-  color: #3f5f73;
-}
-
-.detail-header h1 {
-  margin: 8px 0 0;
-  font-size: clamp(64px, 8vw, 118px);
-  line-height: 0.95;
-  font-weight: 700;
-  color: #1e2d38;
-}
-
-.detail-header p {
-  margin: 14px auto 0;
-  max-width: 820px;
-  font-size: 30px;
-  line-height: 1.35;
-  font-weight: 700;
-  color: #50616d;
-}
-
-.detail-visual {
-  width: min(1060px, 94vw);
-  height: min(60vh, 620px);
-  min-height: 420px;
-  margin: 0 auto 28px;
-  border-radius: 34px;
-  overflow: hidden;
-  box-shadow: 0 28px 80px rgba(31, 41, 51, 0.18);
-}
-
-.detail-visual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.detail-content {
-  width: min(900px, 92vw);
-  margin: 0 auto;
-  padding: 32px;
-  border-radius: 28px;
-  background: rgba(255,255,255,0.86);
-  border: 1px solid rgba(31,41,51,0.08);
-  box-shadow: 0 18px 50px rgba(31,41,51,0.08);
-}
-
-.detail-content p {
-  margin: 0 0 18px;
-  line-height: 1.85;
-  font-size: 25px;
-  color: #3f4b55;
-}
-
-.detail-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 24px;
-}
-
-/* Responsive */
+/* Mobile */
 
 @media (max-width: 760px) {
-  .app-shell,
-  .detail-page {
+  .app-shell {
     padding: 24px 16px 22px;
   }
 
@@ -400,18 +315,6 @@ body {
 
   .brand-header h1 {
     font-size: 76px;
-  }
-
-  .brand-header p {
-    font-size: 22px;
-  }
-
-  .intro-text h2 {
-    font-size: 42px;
-  }
-
-  .intro-text p {
-    font-size: 20px;
   }
 
   .story-stage {
@@ -424,32 +327,31 @@ body {
 
   .story-slide {
     flex-basis: 88vw;
-    height: 62vh;
-    min-height: 500px;
+    height: 66vh;
+    min-height: 520px;
     border-radius: 26px;
   }
 
   .slide-content {
-    left: 18px;
-    right: 18px;
-    bottom: 18px;
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
     grid-template-columns: 1fr;
     gap: 12px;
-    padding: 18px;
   }
 
   .story-label {
-    width: 48px;
-    height: 48px;
-    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 21px;
   }
 
   .story-text h2 {
-    font-size: 44px;
+    font-size: 48px;
   }
 
   .story-text p {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .read-pill {
@@ -459,23 +361,5 @@ body {
 
   .nav-btn {
     display: none;
-  }
-
-  .detail-visual {
-    height: 52vh;
-    min-height: 360px;
-    border-radius: 26px;
-  }
-
-  .detail-header h1 {
-    font-size: 58px;
-  }
-
-  .detail-header p {
-    font-size: 25px;
-  }
-
-  .detail-content p {
-    font-size: 22px;
   }
 }
