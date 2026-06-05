@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>โรงเรียนอัสสัมชัญธนบุรี | หมู่บ้านเศรษฐกิจ REPOST</title>
+
+  <style>
+    @font-face {
+      font-family: "ChulaCharasNew";
+      src: url("ChulaCharasNewReg.ttf") format("truetype");
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: "ChulaCharasNew";
+      src: url("ChulaCharasNewBold.ttf") format("truetype");
+      font-weight: 700;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "ChulaCharasNew", serif;
+      background: #f7f3ea;
+      color: #1e2d38;
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .kicker {
+      font-size: 24px;
+      font-weight: 700;
+      color: #60727d;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(58px, 8vw, 112px);
+      line-height: 0.95;
+      font-weight: 700;
+      color: #1e2d38;
+    }
+
+    .subtitle {
+      max-width: 860px;
+      margin: 18px auto 0;
+      font-size: clamp(24px, 3vw, 36px);
+      line-height: 1.35;
+      font-weight: 700;
+      color: #5d6c77;
+    }
+
+    .hero {
+      width: 100%;
+      margin: 0 auto 38px;
+      border-radius: 34px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 24px 70px rgba(31, 41, 51, 0.14);
+    }
+
+    .hero img {
+      width: 100%;
+      display: block;
+    }
+
+    .article {
+      width: min(880px, 100%);
+      margin: 0 auto 38px;
+      padding: 42px 42px;
+      border-radius: 30px;
+      background: #ffffff;
+      box-shadow: 0 18px 50px rgba(31, 41, 51, 0.08);
+    }
+
+    .article p {
+      margin: 0 0 24px;
+      font-size: 25px;
+      line-height: 1.95;
+      color: #3f4b55;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 38px;
+    }
+
+    .gallery figure {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 28px;
+      background: #ffffff;
+      box-shadow: 0 18px 50px rgba(31, 41, 51, 0.08);
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery figcaption {
+      padding: 16px 20px 20px;
+      font-size: 20px;
+      line-height: 1.6;
+      color: #5b6b76;
+    }
+
+    .credit {
+      width: min(880px, 100%);
+      margin: 0 auto 34px;
+      padding: 30px 34px;
+      border-radius: 28px;
+      background: #ffffff;
+      box-shadow: 0 18px 50px rgba(31, 41, 51, 0.08);
+    }
+
+    .credit h2 {
+      margin: 0 0 14px;
+      font-size: 36px;
+      color: #1e2d38;
+    }
+
+    .credit p {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.75;
+      color: #4f5e69;
+    }
+
+    .back-area {
+      text-align: center;
+    }
+
+    .back-button {
+      display: inline-block;
+      text-decoration: none;
+      color: #ffffff;
+      background: #334150;
+      padding: 18px 38px;
+      border-radius: 999px;
+      font-size: 24px;
+      font-weight: 700;
+      box-shadow: 0 14px 30px rgba(31, 41, 51, 0.18);
+      transition: background 0.25s ease, transform 0.25s ease;
+    }
+
+    .back-button:hover {
+      background: #435565;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 900px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        height: 320px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 28px, 1120px);
+        padding: 32px 0 46px;
+      }
+
+      .kicker {
+        font-size: 18px;
+      }
+
+      h1 {
+        font-size: 54px;
+      }
+
+      .subtitle {
+        font-size: 22px;
+      }
+
+      .hero {
+        border-radius: 24px;
+        margin-bottom: 26px;
+      }
+
+      .article {
+        padding: 26px 22px;
+        border-radius: 22px;
+      }
+
+      .article p {
+        font-size: 20px;
+        line-height: 1.9;
+      }
+
+      .gallery {
+        gap: 20px;
+      }
+
+      .gallery figure {
+        border-radius: 22px;
+      }
+
+      .gallery img {
+        height: 260px;
+      }
+
+      .gallery figcaption {
+        font-size: 18px;
+      }
+
+      .credit {
+        padding: 24px 22px;
+        border-radius: 22px;
+      }
+
+      .credit h2 {
+        font-size: 30px;
+      }
+
+      .credit p {
+        font-size: 19px;
+      }
+
+      .back-button {
+        font-size: 19px;
+        padding: 16px 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <header class="header">
+      <div class="kicker">เรื่องที่ 3 | หมู่บ้านเศรษฐกิจ REPOST</div>
+      <h1>โรงเรียนอัสสัมชัญธนบุรี</h1>
+      <p class="subtitle">การศึกษาในหมู่บ้านเศรษฐกิจ</p>
+    </header>
+
+    <section class="hero">
+      <img src="pic4.svg" alt="โรงเรียนอัสสัมชัญธนบุรี">
+    </section>
+
+    <article class="article">
+      <p>
+        ถ้าพูดถึงหมู่บ้านเศรษฐกิจ อีกสถานที่หนึ่งที่นึกถึงควบคู่กันไปแทบจะทันที
+        ก็คือโรงเรียนอัสสัมชัญธนบุรี
+      </p>
+
+      <p>
+        โรงเรียนอัสสัมชัญธนบุรีก่อตั้งขึ้นเมื่อ พ.ศ. 2504
+        หรือหลังจากหมู่บ้านเศรษฐกิจเริ่มต้นขึ้นได้ไม่นานนัก
+        โรงเรียนแห่งนี้เป็นโรงเรียนลำดับที่ 8
+        ในเครือมูลนิธิคณะเซนต์คาเบรียลแห่งประเทศไทย
+        เกิดขึ้นจากความตั้งใจของคณะภราดา
+        ที่อยากให้มีโรงเรียนของคณะเซนต์คาเบรียลในฝั่งธนบุรี
+        เพื่อให้บุตรหลานของผู้คนในพื้นที่ได้มีโอกาสเรียนหนังสือ
+        ได้อ่านออก เขียนได้ คิดเลขเป็น
+        และมีหลักศาสนาเป็นแนวทางในการดำเนินชีวิต
+      </p>
+
+      <p>
+        จุดที่น่าสนใจ คือเรื่องราวของโรงเรียนแห่งนี้เชื่อมโยงกับคุณไถง สุวรรณทัต
+        อย่างชัดเจน เพราะคุณไถงไม่ได้เป็นเพียงผู้ริเริ่มหมู่บ้านเศรษฐกิจเท่านั้น
+        แต่ท่านยังเป็นศิษย์เก่าโรงเรียนอัสสัมชัญกรุงเทพ
+        เป็นอดีตสมาชิกสภาผู้แทนราษฎรจังหวัดธนบุรี
+        และอดีตนายกเทศมนตรีเทศบาลนครธนบุรีด้วย
+      </p>
+
+      <p>
+        เมื่อท่านเจษฎาธิการ ยอห์น แมรี่ และท่านเจษฎาจารย์ ฟ.ฮีแลร์
+        มีความคิดที่จะตั้งโรงเรียนของคณะเซนต์คาเบรียลขึ้นในย่านธนบุรี
+        จึงได้มาปรึกษากับคุณไถง
+        สุดท้ายคุณไถงก็ได้บริจาคที่ดินจำนวน 56 ไร่ 1 งาน 9 ตารางวา
+        ให้แก่มูลนิธิคณะเซนต์คาเบรียลแห่งประเทศไทย
+        เพื่อใช้เป็นที่ตั้งของโรงเรียนอัสสัมชัญธนบุรี
+      </p>
+
+      <p>
+        ตรงนี้ทำให้เห็นว่า หมู่บ้านเศรษฐกิจและโรงเรียนอัสสัมชัญธนบุรี
+        ไม่ได้เป็นเรื่องที่แยกขาดจากกันเลย
+        ทั้งสองแห่งมีจุดร่วมสำคัญอยู่ที่คุณไถง สุวรรณทัต
+        ผู้มีบทบาทอย่างมากต่อการเปลี่ยนแปลงพื้นที่แถบนี้
+        จากพื้นที่ชานเมืองฝั่งธนบุรี
+        ให้ค่อย ๆ กลายเป็นชุมชนที่มีทั้งบ้าน โรงเรียน
+        และพื้นที่พักผ่อนของผู้คน
+      </p>
+
+      <p>
+        โรงเรียนอัสสัมชัญธนบุรีได้รับอนุญาตให้เปิดสอนได้ตามใบอนุญาตเลขที่ 43/2504
+        ลงวันที่ 15 พฤษภาคม พ.ศ. 2504
+        และต่อมาได้รับการรับรองวิทยฐานะเทียบเท่าโรงเรียนรัฐบาล
+        เมื่อวันที่ 12 กรกฎาคม พ.ศ. 2515
+        หลังจากนั้นโรงเรียนก็พัฒนามาเรื่อย ๆ
+        ทั้งด้านอาคารสถานที่ การเรียนการสอน และบุคลากร
+        จนกลายเป็นโรงเรียนขนาดใหญ่ที่เรารู้จักกันในปัจจุบัน
+      </p>
+
+      <p>
+        ถ้ามองย้อนกลับไป พื้นที่บริเวณนี้จึงไม่ได้มีแค่เรื่องของหมู่บ้านจัดสรรเท่านั้น
+        แต่ยังมีเรื่องของการศึกษาเข้ามาเกี่ยวข้องด้วย
+        หมู่บ้านเศรษฐกิจเป็นเหมือนพื้นที่อยู่อาศัย
+        ที่เปิดโอกาสให้ผู้คนได้มีบ้าน
+        ส่วนโรงเรียนอัสสัมชัญธนบุรีก็เป็นเหมือนพื้นที่
+        ที่สร้างโอกาสทางการศึกษาให้กับบุตรหลานของผู้คนในย่านนี้
+      </p>
+
+      <p>
+        และเมื่อคิดถึงภาพของหมู่บ้านเศรษฐกิจในอดีต
+        ที่เคยมีทะเลสาบ บังกะโล เกาะกลางน้ำ
+        และสถานที่ตากอากาศบางสตางค์น้อย
+        ก็ยิ่งทำให้เห็นว่าโรงเรียนอัสสัมชัญธนบุรี
+        ไม่ได้ตั้งอยู่ในพื้นที่ธรรมดา ๆ
+        แต่ตั้งอยู่ท่ามกลางพื้นที่ที่มีเรื่องเล่า มีความทรงจำ
+        และมีการเปลี่ยนแปลงของชุมชนอยู่รอบตัว
+      </p>
+
+      <p>
+        ดังนั้น เรื่องของโรงเรียนอัสสัมชัญธนบุรี
+        จึงไม่ใช่แค่ประวัติของโรงเรียนแห่งหนึ่ง
+        แต่เป็นส่วนหนึ่งของเรื่องราวหมู่บ้านเศรษฐกิจ
+        และเป็นส่วนหนึ่งของความทรงจำของย่านบางแค
+        ที่เติบโตมาพร้อมกับผู้คน บ้านเรือน
+        และชุมชนตลอดหลายสิบปีที่ผ่านมา
+      </p>
+    </article>
+
+    <section class="gallery">
+      <figure>
+        <img src="pic31.svg" alt="ภาพประกอบโรงเรียนอัสสัมชัญธนบุรี 1">
+        <figcaption>ภาพประกอบเพิ่มเติมเกี่ยวกับโรงเรียนอัสสัมชัญธนบุรี</figcaption>
+      </figure>
+
+      <figure>
+        <img src="pic32.svg" alt="ภาพประกอบโรงเรียนอัสสัมชัญธนบุรี 2">
+        <figcaption>ภาพประกอบเพิ่มเติมเกี่ยวกับพื้นที่โรงเรียนและชุมชนโดยรอบ</figcaption>
+      </figure>
+    </section>
+
+    <section class="credit">
+      <h2>ขอบคุณข้อมูล</h2>
+      <p>ขอบคุณข้อมูลจาก โรงเรียนอัสสัมชัญธนบุรี</p>
+    </section>
+
+    <div class="back-area">
+      <a href="index.html" class="back-button">กลับหน้าแรก</a>
+    </div>
+
+  </main>
+
+</body>
+</html>
