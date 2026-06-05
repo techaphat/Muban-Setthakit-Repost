@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>โรงถ่ายหนัง | หมู่บ้านเศรษฐกิจ REPOST</title>
+
+  <style>
+    @font-face {
+      font-family: "ChulaCharasNew";
+      src: url("ChulaCharasNewReg.ttf") format("truetype");
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: "ChulaCharasNew";
+      src: url("ChulaCharasNewBold.ttf") format("truetype");
+      font-weight: 700;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "ChulaCharasNew", serif;
+      background: #f7f3ea;
+      color: #1e2d38;
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .kicker {
+      font-size: 24px;
+      font-weight: 700;
+      color: #60727d;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(58px, 8vw, 112px);
+      line-height: 0.95;
+      font-weight: 700;
+      color: #1e2d38;
+    }
+
+    .subtitle {
+      max-width: 860px;
+      margin: 18px auto 0;
+      font-size: clamp(24px, 3vw, 36px);
+      line-height: 1.35;
+      font-weight: 700;
+      color: #5d6c77;
+    }
+
+    .hero {
+      width: 100%;
+      margin: 0 auto 38px;
+      border-radius: 34px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 24px 70px rgba(31, 41, 51, 0.14);
+    }
+
+    .hero img {
+      width: 100%;
+      display: block;
+    }
+
+    .article {
+      width: min(880px, 100%);
+      margin: 0 auto 38px;
+      padding: 42px 42px;
+      border-radius: 30px;
+      background: #ffffff;
+      box-shadow: 0 18px 50px rgba(31, 41, 51, 0.08);
+    }
+
+    .article p {
+      margin: 0 0 24px;
+      font-size: 25px;
+      line-height: 1.95;
+      color: #3f4b55;
+    }
+
+    .video-card {
+      width: min(880px, 100%);
+      margin: 0 auto 38px;
+      padding: 30px 34px;
+      border-radius: 30px;
+      background: #ffffff;
+      box-shadow: 0 18px 50px rgba(31, 41, 51, 0.08);
+    }
+
+    .video-card h2 {
+      margin: 0 0 12px;
+      font-size: 38px;
+      color: #1e2d38;
+    }
+
+    .video-card p {
+      margin: 0 0 22px;
+      font-size: 22px;
+      line-height: 1.75;
+      color: #4f5e69;
+    }
+
+    .video-button {
+      display: inline-block;
+      text-decoration: none;
+      color: #ffffff;
+      background: #a33c2f;
+      padding: 16px 30px;
+      border-radius: 999px;
+      font-size: 22px;
+      font-weight: 700;
+      box-shadow: 0 14px 30px rgba(163, 60, 47, 0.20);
+      transition: background 0.25s ease, transform 0.25s ease;
+    }
+
+    .video-button:hover {
+      background: #842f25;
+      transform: translateY(-2px);
+    }
+
+    .credit {
+      width: min(880px, 100%);
+      margin: 0 auto 34px;
+      padding: 30px 34px;
+      border-radius: 28px;
+      background: #ffffff;
+      box-shadow: 0 18px 50px rgba(31, 41, 51, 0.08);
+    }
+
+    .credit h2 {
+      margin: 0 0 14px;
+      font-size: 36px;
+      color: #1e2d38;
+    }
+
+    .credit p {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.75;
+      color: #4f5e69;
+    }
+
+    .back-area {
+      text-align: center;
+    }
+
+    .back-button {
+      display: inline-block;
+      text-decoration: none;
+      color: #ffffff;
+      background: #334150;
+      padding: 18px 38px;
+      border-radius: 999px;
+      font-size: 24px;
+      font-weight: 700;
+      box-shadow: 0 14px 30px rgba(31, 41, 51, 0.18);
+      transition: background 0.25s ease, transform 0.25s ease;
+    }
+
+    .back-button:hover {
+      background: #435565;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 28px, 1120px);
+        padding: 32px 0 46px;
+      }
+
+      .kicker {
+        font-size: 18px;
+      }
+
+      h1 {
+        font-size: 54px;
+      }
+
+      .subtitle {
+        font-size: 22px;
+      }
+
+      .hero {
+        border-radius: 24px;
+        margin-bottom: 26px;
+      }
+
+      .article {
+        padding: 26px 22px;
+        border-radius: 22px;
+      }
+
+      .article p {
+        font-size: 20px;
+        line-height: 1.9;
+      }
+
+      .video-card {
+        padding: 24px 22px;
+        border-radius: 22px;
+      }
+
+      .video-card h2 {
+        font-size: 30px;
+      }
+
+      .video-card p {
+        font-size: 19px;
+      }
+
+      .video-button {
+        font-size: 19px;
+        padding: 14px 24px;
+      }
+
+      .credit {
+        padding: 24px 22px;
+        border-radius: 22px;
+      }
+
+      .credit h2 {
+        font-size: 30px;
+      }
+
+      .credit p {
+        font-size: 19px;
+      }
+
+      .back-button {
+        font-size: 19px;
+        padding: 16px 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <header class="header">
+      <div class="kicker">เรื่องที่ 2 | หมู่บ้านเศรษฐกิจ REPOST</div>
+      <h1>โรงถ่ายหนัง</h1>
+      <p class="subtitle">สุริยะเทพภาพยนตร์กับหมู่บ้านเศรษฐกิจ</p>
+    </header>
+
+    <section class="hero">
+      <img src="pic3.svg" alt="โรงถ่ายหนัง">
+    </section>
+
+    <article class="article">
+      <p>
+        ถ้าพูดถึงหมู่บ้านเศรษฐกิจ หลายคนอาจนึกถึงภาพของหมู่บ้านจัดสรรขนาดใหญ่แห่งแรก ๆ
+        ของประเทศไทย หรืออาจนึกถึงโรงเรียนอัสสัมชัญธนบุรีที่ตั้งอยู่ใกล้ ๆ กัน
+      </p>
+
+      <p>
+        แต่จริง ๆ แล้ว เรื่องของหมู่บ้านเศรษฐกิจยังมีอีกมุมหนึ่งที่น่าสนใจมาก
+        คือมุมที่เกี่ยวข้องกับ “ภาพยนตร์ไทย”
+      </p>
+
+      <p>
+        จุดเชื่อมของเรื่องนี้ก็คือคุณไถง สุวรรณทัต ผู้บุกเบิกหมู่บ้านเศรษฐกิจนั่นเอง
+      </p>
+
+      <p>
+        คุณไถงไม่ได้เป็นเพียงนักการเมือง หรือผู้จัดสรรที่ดินที่สร้างหมู่บ้านเศรษฐกิจเท่านั้น
+        แต่ท่านยังเป็นคนที่มีความสนใจในวงการภาพยนตร์ด้วย เคยสร้างและกำกับภาพยนตร์หลายเรื่อง
+        หนึ่งในนั้นคือเรื่อง “พระลอ” ซึ่งเป็นภาพยนตร์ไทยที่ถูกพูดถึงในฐานะผลงานสำคัญเรื่องหนึ่งของท่าน
+      </p>
+
+      <p>
+        สิ่งที่ทำให้เรื่องนี้น่าสนใจ คือมีข้อมูลว่าคุณไถงเคยสร้างโรงถ่ายและห้องบันทึกเสียงขึ้นที่หมู่บ้านเศรษฐกิจด้วย
+      </p>
+
+      <p>
+        ตรงนี้ทำให้ภาพของหมู่บ้านเศรษฐกิจในอดีตดูมีชีวิตขึ้นมาอีกแบบหนึ่ง
+        เพราะที่นี่ไม่ได้เป็นแค่หมู่บ้านจัดสรรที่แบ่งที่ดินขายให้ผู้คนได้มีบ้าน
+        ไม่ได้เป็นแค่พื้นที่ที่มีทะเลสาบ บังกะโล และสถานที่ตากอากาศบางสตางค์น้อย
+        แต่ยังเคยเป็นพื้นที่ของความฝันแบบภาพยนตร์ไทยด้วย
+      </p>
+
+      <p>
+        ลองนึกภาพหมู่บ้านเศรษฐกิจในยุคนั้น นอกจากจะมีคนย้ายเข้ามาอยู่อาศัย
+        มีเด็ก ๆ เติบโต มีครอบครัวเริ่มต้นชีวิตใหม่แล้ว อีกมุมหนึ่งของพื้นที่เดียวกันนี้
+        อาจเคยมีเสียงกล้อง เสียงผู้กำกับ เสียงคนทำงานเบื้องหลัง และการสร้างภาพยนตร์เกิดขึ้นด้วย
+      </p>
+
+      <p>
+        นี่จึงทำให้เรื่องของหมู่บ้านเศรษฐกิจน่าสนใจกว่าการเป็น “หมู่บ้านจัดสรรแห่งแรก”
+        เพราะพื้นที่แห่งนี้เหมือนรวมหลายความฝันเอาไว้ในที่เดียว
+        ทั้งความฝันของคนอยากมีบ้าน ความฝันของการสร้างโรงเรียนให้ลูกหลาน
+        และความฝันของคนทำหนังไทยในยุคหนึ่ง
+      </p>
+
+      <p>
+        สำหรับผม จุดนี้ทำให้คุณไถง สุวรรณทัต เป็นบุคคลที่น่าสนใจมาก
+        เพราะท่านไม่ได้มองพื้นที่นี้แค่ในแง่ของการขายที่ดิน
+        แต่มองพื้นที่นี้เป็นเหมือนพื้นที่สร้างชีวิต สร้างชุมชน และสร้างจินตนาการ
+      </p>
+
+      <p>
+        หมู่บ้านเศรษฐกิจจึงไม่ได้มีแค่เรื่องของบ้าน ถนน หรือที่ดิน
+        แต่ยังมีเรื่องของคน ความทรงจำ โรงเรียน ทะเลสาบ
+        และแม้กระทั่งภาพยนตร์ไทยซ่อนอยู่ในพื้นที่เดียวกัน
+      </p>
+    </article>
+
+    <section class="video-card">
+      <h2>ชมภาพยนตร์ “พระลอ”</h2>
+      <p>
+        สามารถรับชมภาพยนตร์เรื่อง “พระลอ” ที่เกี่ยวข้องกับคุณไถง สุวรรณทัต
+        ผ่านลิงก์ด้านล่าง
+      </p>
+
+      <a class="video-button" href="https://www.youtube.com/watch?v=fSrv_NUf1NQ" target="_blank" rel="noopener">
+        เปิดวิดีโอพระลอ
+      </a>
+    </section>
+
+    <section class="credit">
+      <h2>ขอบคุณข้อมูล</h2>
+      <p>ขอบคุณข้อมูลจาก หอภาพยนตร์แห่งชาติ</p>
+    </section>
+
+    <div class="back-area">
+      <a href="index.html" class="back-button">กลับหน้าแรก</a>
+    </div>
+
+  </main>
+
+</body>
+</html>
