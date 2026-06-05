@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>หมู่บ้านเศรษฐกิจ REPOST</title>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -20,11 +21,12 @@
 
     <section class="story-stage">
 
-      <button class="nav-btn nav-left" onclick="scrollStories(-1)">‹</button>
+      <button class="nav-btn nav-left" onclick="scrollStories(-1)" aria-label="เลื่อนไปซ้าย">‹</button>
 
       <div class="story-track" id="storyTrack">
 
-        <article class="story-slide active">
+        <!-- STORY 01 -->
+        <article class="story-slide">
           <a href="bang-satang-noi.html" class="story-image-link">
             <img src="pic2.svg" alt="บางสตางค์น้อย" />
           </a>
@@ -35,31 +37,45 @@
               <strong>บางสตางค์น้อย</strong>
             </div>
 
-            <a class="read-pill" href="bang-satang-noi.html">
-              READ
-            </a>
+            <a class="read-pill" href="bang-satang-noi.html">READ</a>
           </div>
         </article>
 
-        <article class="story-slide placeholder-slide">
-          <div class="placeholder-inner">
-            <span>02</span>
-            <h2>เรื่องถัดไป</h2>
-            <p>ภาพยนตร์เรื่องพระลอ ถ่ายทำที่หมู่บ้านเศรษฐกิจ</p>
+        <!-- STORY 02 -->
+        <article class="story-slide">
+          <a href="rong-thai-nang.html" class="story-image-link">
+            <img src="pic3.svg" alt="โรงถ่ายหนัง" />
+          </a>
+
+          <div class="slide-bottom">
+            <div class="slide-meta">
+              <span>02</span>
+              <strong>โรงถ่ายหนัง</strong>
+            </div>
+
+            <a class="read-pill" href="rong-thai-nang.html">READ</a>
           </div>
         </article>
 
-        <article class="story-slide placeholder-slide">
-          <div class="placeholder-inner">
-            <span>03</span>
-            <h2>เรื่องถัดไป</h2>
-            <p>ทางเข้าหมู่บ้าน ร้านค้าเก่า และความทรงจำวัยเด็ก</p>
+        <!-- STORY 03 -->
+        <article class="story-slide">
+          <a href="act-school.html" class="story-image-link">
+            <img src="pic4.svg" alt="โรงเรียนอัสสัมชัญธนบุรี" />
+          </a>
+
+          <div class="slide-bottom">
+            <div class="slide-meta">
+              <span>03</span>
+              <strong>โรงเรียนอัสสัมชัญธนบุรี</strong>
+            </div>
+
+            <a class="read-pill" href="act-school.html">READ</a>
           </div>
         </article>
 
       </div>
 
-      <button class="nav-btn nav-right" onclick="scrollStories(1)">›</button>
+      <button class="nav-btn nav-right" onclick="scrollStories(1)" aria-label="เลื่อนไปขวา">›</button>
 
     </section>
 
