@@ -5,125 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>หมู่บ้านเศรษฐกิจ REPOST</title>
-
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <header class="topbar">
-    <div class="logo-text">หมู่บ้านเศรษฐกิจ REPOST</div>
+  <main class="app-shell">
 
-    <nav class="nav-links">
-      <a href="#stories">เรื่องเล่า</a>
-      <a href="#about">เกี่ยวกับ</a>
-      <a href="#comment">ร่วมเล่าเพิ่มเติม</a>
-    </nav>
-  </header>
+    <header class="brand-header">
+      <div class="small-title">หมู่บ้านเศรษฐกิจ</div>
+      <h1>REPOST</h1>
+      <p>ภาพเก่า เล่าใหม่ ความทรงจำของชุมชน</p>
+    </header>
 
-  <main>
+    <section class="story-stage">
 
-    <section class="hero" id="home">
-      <div class="hero-inner">
-        <div class="eyebrow">PUBLIC HISTORY PROJECT</div>
+      <button class="nav-btn nav-left" onclick="scrollStories(-1)">‹</button>
 
-        <h1>หมู่บ้านเศรษฐกิจ REPOST</h1>
+      <div class="story-track" id="storyTrack">
 
-        <p>
-          ภาพเก่า เล่าใหม่ ความทรงจำของชุมชน
-        </p>
-      </div>
-    </section>
+        <article class="story-slide active">
+          <a href="bang-satang-noi.html" class="story-image-link">
+            <img src="pic2.svg" alt="บางสตางค์น้อย" />
+          </a>
 
-    <section class="stories-section" id="stories">
+          <div class="slide-bottom">
+            <div class="slide-meta">
+              <span>01</span>
+              <strong>บางสตางค์น้อย</strong>
+            </div>
 
-      <div class="section-heading">
-        <h2>เลือกเรื่องที่อยากอ่าน</h2>
-        <p>
-          เลื่อนดูการ์ดเรื่องเล่า ภาพจะเริ่มต้นเป็นสีเทา
-          และกลับมาเป็นสีเมื่อชี้หรือแตะ
-        </p>
-      </div>
-
-      <div class="story-carousel">
-
-        <article class="story-card">
-          <img src="pic2.svg" alt="บางสตางค์น้อย">
-
-          <div class="story-gradient"></div>
-
-          <div class="story-info">
-            <span class="story-number">เรื่องที่ 1</span>
-
-            <h3>บางสตางค์น้อย</h3>
-
-            <p>
-              จากสถานตากอากาศบางสตางค์น้อย ถึงหมู่บ้านเศรษฐกิจ
-            </p>
-
-            <a class="read-btn" href="bang-satang-noi.html">READ</a>
+            <a class="read-pill" href="bang-satang-noi.html">
+              READ
+            </a>
           </div>
         </article>
 
-        <article class="story-card empty-card">
-          <div class="empty-content">
-            <span class="story-number">เรื่องที่ 2</span>
-
-            <h3>รอเพิ่มเรื่องถัดไป</h3>
-
-            <p>
-              เช่น ภาพยนตร์เรื่องพระลอ ถ่ายทำที่หมู่บ้านเศรษฐกิจ
-            </p>
+        <article class="story-slide placeholder-slide">
+          <div class="placeholder-inner">
+            <span>02</span>
+            <h2>เรื่องถัดไป</h2>
+            <p>ภาพยนตร์เรื่องพระลอ ถ่ายทำที่หมู่บ้านเศรษฐกิจ</p>
           </div>
         </article>
 
-        <article class="story-card empty-card">
-          <div class="empty-content">
-            <span class="story-number">เรื่องที่ 3</span>
-
-            <h3>รอเพิ่มเรื่องถัดไป</h3>
-
-            <p>
-              เช่น ทางเข้าเก่า ร้านค้าเก่า หรือความทรงจำวัยเด็ก
-            </p>
+        <article class="story-slide placeholder-slide">
+          <div class="placeholder-inner">
+            <span>03</span>
+            <h2>เรื่องถัดไป</h2>
+            <p>ทางเข้าหมู่บ้าน ร้านค้าเก่า และความทรงจำวัยเด็ก</p>
           </div>
         </article>
 
       </div>
 
+      <button class="nav-btn nav-right" onclick="scrollStories(1)">›</button>
+
     </section>
 
-    <section class="about-section" id="about">
-      <div class="about-card">
-        <h2>เกี่ยวกับโครงการ</h2>
-
-        <p>
-          หมู่บ้านเศรษฐกิจ REPOST คือพื้นที่ทดลองเล่าเรื่องประวัติศาสตร์ชุมชน
-          ผ่านภาพถ่ายเก่า เรื่องเล่า และความทรงจำของผู้คน
-          เพื่อชวนมองพื้นที่เดิมในความหมายใหม่
-        </p>
-      </div>
-    </section>
-
-    <section class="comment-section" id="comment">
-      <div class="comment-card">
-        <h2>ร่วมเล่าเพิ่มเติม</h2>
-
-        <p>
-          หากคุณมีภาพถ่ายหรือความทรงจำเกี่ยวกับหมู่บ้านเศรษฐกิจ
-          สามารถร่วมเล่าเพิ่มเติมได้ผ่านแบบฟอร์ม
-        </p>
-
-        <a class="read-btn" href="#" target="_blank" rel="noopener">
-          เปิดฟอร์มร่วมเล่า
-        </a>
-      </div>
-    </section>
+    <footer class="bottom-menu">
+      <a href="#">ส่งเรื่องเล่า</a>
+      <a href="#">แผนที่ความทรงจำ</a>
+      <a href="#">เกี่ยวกับโครงการ</a>
+    </footer>
 
   </main>
-
-  <footer class="footer">
-    <p>หมู่บ้านเศรษฐกิจ REPOST | Public History Website</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
