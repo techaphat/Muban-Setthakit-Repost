@@ -10,58 +10,75 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="brand-label">PUBLIC HISTORY PROJECT</div>
-    <h1>หมู่บ้านเศรษฐกิจ REPOST</h1>
-    <p>ภาพเก่า เล่าใหม่ ความทรงจำของชุมชน</p>
+  <header class="topbar">
+    <div class="logo-text">หมู่บ้านเศรษฐกิจ REPOST</div>
+
+    <nav class="nav-links">
+      <a href="#stories">เรื่องเล่า</a>
+      <a href="#">แผนที่</a>
+      <a href="#">ร่วมเล่าเพิ่มเติม</a>
+    </nav>
   </header>
 
-  <main class="story-section">
+  <main>
 
-    <div class="section-title">
-      <h2>เลือกเรื่องที่อยากอ่าน</h2>
-      <p>เลื่อนดูการ์ดเรื่องเล่า แล้วแตะหรือชี้เพื่อปลุกภาพความทรงจำให้กลับมาเป็นสี</p>
-    </div>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">PUBLIC HISTORY PROJECT</div>
+        <h1>ภาพเก่า เล่าใหม่</h1>
+        <p>
+          พื้นที่รวบรวมเรื่องเล่า ภาพถ่าย และความทรงจำของหมู่บ้านเศรษฐกิจ
+          ผ่านมุมมองของผู้คนในชุมชน
+        </p>
+      </div>
+    </section>
 
-    <div class="story-row">
+    <section id="stories" class="stories-section">
 
-      <article class="story-card">
-        <img src="images/pic2.svg" alt="บางสตางค์น้อย" />
+      <div class="section-heading">
+        <h2>เลือกเรื่องที่อยากอ่าน</h2>
+        <p>เลื่อนดูการ์ดเรื่องเล่า ภาพจะเริ่มต้นเป็นสีเทา และกลับมาเป็นสีเมื่อชี้หรือแตะ</p>
+      </div>
 
-        <div class="story-overlay">
-          <div>
-            <span class="story-tag">เรื่องที่ 1</span>
+      <div class="story-carousel">
+
+        <article class="story-card">
+          <img src="images/pic2.svg" alt="บางสตางค์น้อย" />
+
+          <div class="story-gradient"></div>
+
+          <div class="story-info">
+            <span class="story-number">เรื่องที่ 1</span>
             <h3>บางสตางค์น้อย</h3>
             <p>จากสถานตากอากาศบางสตางค์น้อย ถึงหมู่บ้านเศรษฐกิจ</p>
+            <a class="read-btn" href="bang-satang-noi.html">READ</a>
           </div>
+        </article>
 
-          <a class="read-btn" href="bang-satang-noi.html">READ</a>
-        </div>
-      </article>
+        <article class="story-card empty-card">
+          <div class="empty-content">
+            <span class="story-number">เรื่องที่ 2</span>
+            <h3>รอเพิ่มเรื่องถัดไป</h3>
+            <p>เช่น ภาพยนตร์เรื่องพระลอ ถ่ายทำที่หมู่บ้านเศรษฐกิจ</p>
+          </div>
+        </article>
 
-      <article class="story-card placeholder">
-        <div class="placeholder-content">
-          <span>เรื่องที่ 2</span>
-          <h3>รอเพิ่มเรื่องถัดไป</h3>
-          <p>เช่น ภาพยนตร์เรื่องพระลอ / ทางเข้าเก่า / ร้านค้าในความทรงจำ</p>
-        </div>
-      </article>
+        <article class="story-card empty-card">
+          <div class="empty-content">
+            <span class="story-number">เรื่องที่ 3</span>
+            <h3>รอเพิ่มเรื่องถัดไป</h3>
+            <p>เช่น ทางเข้าเก่า ร้านค้าเก่า หรือความทรงจำวัยเด็ก</p>
+          </div>
+        </article>
 
-      <article class="story-card placeholder">
-        <div class="placeholder-content">
-          <span>เรื่องที่ 3</span>
-          <h3>รอเพิ่มเรื่องถัดไป</h3>
-          <p>เพิ่มภาพปกแบบ .webp แล้วนำมาใส่เป็นการ์ดใหม่</p>
-        </div>
-      </article>
+      </div>
 
-    </div>
+    </section>
 
   </main>
 
-  <footer class="site-footer">
-    <a href="#" class="footer-link">ร่วมเล่าเพิ่มเติม</a>
-    <a href="#" class="footer-link">ดูแผนที่ความทรงจำ</a>
+  <footer class="footer">
+    <p>หมู่บ้านเศรษฐกิจ REPOST | Public History Website</p>
   </footer>
 
   <script src="script.js"></script>
