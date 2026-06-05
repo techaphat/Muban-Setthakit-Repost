@@ -1,6 +1,18 @@
-console.log("หมู่บ้านเศรษฐกิจ REPOST loaded");
+const track = document.getElementById("storyTrack");
 
-document.querySelectorAll(".story-card").forEach((card) => {
+function scrollStories(direction) {
+  if (!track) return;
+
+  const firstSlide = track.querySelector(".story-slide");
+  const slideWidth = firstSlide ? firstSlide.offsetWidth + 34 : 600;
+
+  track.scrollBy({
+    left: direction * slideWidth,
+    behavior: "smooth"
+  });
+}
+
+document.querySelectorAll(".story-slide").forEach((card) => {
   card.addEventListener("touchstart", () => {
     card.classList.add("is-touching");
   });
