@@ -11,29 +11,57 @@
 <body>
 
   <header class="site-header">
-    <div class="brand">
-      <div class="brand-small">หมู่บ้านเศรษฐกิจ</div>
-      <h1>REPOST</h1>
-      <p>ภาพเก่า เล่าใหม่ ความทรงจำของชุมชน</p>
-    </div>
+    <div class="brand-label">PUBLIC HISTORY PROJECT</div>
+    <h1>หมู่บ้านเศรษฐกิจ REPOST</h1>
+    <p>ภาพเก่า เล่าใหม่ ความทรงจำของชุมชน</p>
   </header>
 
-  <main class="app">
-    <section class="toolbar">
-      <input id="searchInput" type="text" placeholder="ค้นหาโพสต์ เรื่องเล่า หรือสถานที่..." />
+  <main class="story-section">
 
-      <select id="categoryFilter">
-        <option value="all">ทุกหมวดหมู่</option>
-      </select>
-    </section>
+    <div class="section-title">
+      <h2>เลือกเรื่องที่อยากอ่าน</h2>
+      <p>เลื่อนดูการ์ดเรื่องเล่า แล้วแตะหรือชี้เพื่อปลุกภาพความทรงจำให้กลับมาเป็นสี</p>
+    </div>
 
-    <section id="postFeed" class="feed">
-      <div class="loading">กำลังโหลดเรื่องเล่า...</div>
-    </section>
+    <div class="story-row">
+
+      <article class="story-card">
+        <img src="images/bang_satang_noi_overlay_v2.webp" alt="บางสตางค์น้อย" />
+
+        <div class="story-overlay">
+          <div>
+            <span class="story-tag">เรื่องที่ 1</span>
+            <h3>บางสตางค์น้อย</h3>
+            <p>จากสถานตากอากาศบางสตางค์น้อย ถึงหมู่บ้านเศรษฐกิจ</p>
+          </div>
+
+          <a class="read-btn" href="bang-satang-noi.html">READ</a>
+        </div>
+      </article>
+
+      <article class="story-card placeholder">
+        <div class="placeholder-content">
+          <span>เรื่องที่ 2</span>
+          <h3>รอเพิ่มเรื่องถัดไป</h3>
+          <p>เช่น ภาพยนตร์เรื่องพระลอ / ทางเข้าเก่า / ร้านค้าในความทรงจำ</p>
+        </div>
+      </article>
+
+      <article class="story-card placeholder">
+        <div class="placeholder-content">
+          <span>เรื่องที่ 3</span>
+          <h3>รอเพิ่มเรื่องถัดไป</h3>
+          <p>เพิ่มภาพปกแบบ .webp แล้วนำมาใส่เป็นการ์ดใหม่</p>
+        </div>
+      </article>
+
+    </div>
+
   </main>
 
-  <footer class="footer">
-    หมู่บ้านเศรษฐกิจ REPOST | Public History Project
+  <footer class="site-footer">
+    <a href="#" class="footer-link">ร่วมเล่าเพิ่มเติม</a>
+    <a href="#" class="footer-link">ดูแผนที่ความทรงจำ</a>
   </footer>
 
   <script src="script.js"></script>
